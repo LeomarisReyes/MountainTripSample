@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"  
+    xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    x:Class="MountainTripTimeSample.Views.PrincipalPage">
+    <ContentPage.Content>
+     
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="0" BackgroundColor="White">
+           <Grid.RowDefinitions>
+               <RowDefinition Height="*"/>
+               <RowDefinition Height="auto"/>
+               <RowDefinition Height="auto"/>
+               <RowDefinition Height="auto"/> 
+           </Grid.RowDefinitions> 
+           <Image Grid.Row="0" Source="Principal" Aspect="AspectFill" />
+
+           <StackLayout Grid.Row="0" HorizontalOptions="End" Margin="0,30,30,0" TranslationY="50">
+               <SearchBar BackgroundColor="Transparent">
+                   <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates"> 
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>  
+                                     <Setter Property="WidthRequest" Value="130" /> 
+                                </VisualState.Setters>
+                            </VisualState> 
+                            <VisualState x:Name="Focused">
+                                <VisualState.Setters>
+                                     <Setter Property="WidthRequest" Value="220" /> 
+                                </VisualState.Setters>
+                            </VisualState> 
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                   </SearchBar>
+           </StackLayout>
+
+           <Frame Grid.Row="1" Style="{StaticResource FrameBtnStyle}"/>
+            
+           <StackLayout Grid.Row="2" TranslationY="-30"  VerticalOptions="StartAndExpand">
+                <Label  Margin="30,0" HorizontalTextAlignment="Start">
+                       <Label.FormattedText>
+                            <FormattedString>
+                               <Span Text="Pick up " FontSize="36" FontAttributes="Bold" />
+                                <Span Text="mountain" FontSize="35"/> 
+                            </FormattedString>
+                        </Label.FormattedText>
+                </Label>
+
+                <Label  Margin="30,0" Text="Our adventures are as individual as the &#10;people who take them, with destinations,&#10;themes and experiences adventures." TextColor="Silver" FontSize="Medium" HorizontalTextAlignment="Start"/>
+
+           </StackLayout>
+          
+          <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Padding="20,25">
+              <Grid>
+                  <Grid.ColumnDefinitions>
+                       <ColumnDefinition Width="Auto"/>
+                       <ColumnDefinition Width="Auto"/>
+                       <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+
+                  <Frame Grid.Column="0" BorderColor="Black" Style="{StaticResource FrameBtnStyle}">
+                       <Label  HorizontalTextAlignment="Center" VerticalOptions="Center">
+                           <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Jul&#10;" FontSize="Small" FontAttributes="Bold" />
+                                    <Span Text="18" FontSize="{OnPlatform iOS='Header', Android='28'}" FontAttributes="Bold"/> 
+                                </FormattedString>
+                            </Label.FormattedText>
+                       </Label>
+                  </Frame>
+
+                   <Frame Grid.Column="1" BackgroundColor="Black" Style="{StaticResource FrameBtnStyle}">
+                       <Label  HorizontalTextAlignment="Center" VerticalOptions="Center" TextColor="White">
+                           <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Jul&#10;" FontSize="Small" FontAttributes="Bold" />
+                                    <Span Text="30" FontSize="{OnPlatform iOS='Header', Android='28'}"   FontAttributes="Bold"/> 
+                                </FormattedString>
+                            </Label.FormattedText>
+                       </Label>
+                  </Frame>
+
+                  <Frame Grid.Column="2" BackgroundColor="#e5354b" Style="{StaticResource FrameBtnStyle}" HorizontalOptions="EndAndExpand">
+                            <Label Text="..." FontSize="{OnPlatform iOS='Header', Android='28'}"  TextColor="White" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/> 
+                     <Frame.GestureRecognizers>
+                             <TapGestureRecognizer
+                                  NumberOfTapsRequired="1" 
+                                  Tapped="Btn_Tapped"/>
+                     </Frame.GestureRecognizers>
+                  </Frame>
+              </Grid> 
+        </Grid>
+
+     </Grid>
+    
+    </ContentPage.Content>
+</ContentPage>

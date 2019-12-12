@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MountainTripTimeSample.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="FrameBtnStyle" TargetType="Frame">
+                <Setter Property="CornerRadius"        Value = "15"   />
+                <Setter Property="HasShadow"           Value = "False"        />
+                <Setter Property="WidthRequest"        Value = "32"    /> 
+                <Setter Property="HeightRequest"       Value = "45"/>
+            </Style>
+        </ResourceDictionary> 
+        <Style TargetType="Frame"> 
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                    <Setter Property="TranslationY" Value="-45" />
+                                    <Setter Property="HasShadow" Value="True" /> 
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="UnSelected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#f8f8f8" />
+                                    <Setter Property="TranslationY" Value="-30" />
+                                    <Setter Property="HasShadow" Value="False" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+              
+            </Style>
+    </Application.Resources>
+</Application>
+

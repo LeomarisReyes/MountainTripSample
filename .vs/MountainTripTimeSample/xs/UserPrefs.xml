@@ -1,0 +1,5 @@
+﻿<Properties StartupConfiguration="{4B504528-7998-4951-A372-CB08479ADCBC}|Default">
+  <MonoDevelop.Ide.ItemProperties.MountainTripTimeSample.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MountainTripTimeSample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8D5CAF6B-F58B-4CF0-BD60-2D0B2D8325BE" />
+</Properties>
